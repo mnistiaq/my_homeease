@@ -1,0 +1,9 @@
+# Root .htaccess — redirect everything to /public/
+RewriteEngine On
+
+# If the request is NOT already pointing to the public directory
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteCond %{REQUEST_URI} !^/storage/
+
+# Redirect all traffic to the public folder
+RewriteRule ^(.*)$ /public/$1 [L]

@@ -1,0 +1,12 @@
+# Public directory .htaccess
+# Enable error reporting for debugging (remove in production if desired)
+# php_flag display_errors on
+
+# Deny access to sensitive files
+<FilesMatch "\.(env|ini|log|sh|sql)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Default index
+DirectoryIndex index.php
